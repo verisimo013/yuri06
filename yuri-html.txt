@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>javascript</title>
+ </head>
+ <boody>
+
+    <script lang="javascript">
+
+       //variáveis
+         var aresta, base, altura, resultado, diagonal, nota1, nota2, nota3, nota4, valor1, valor2, raiz;
+         var f, c, num1, num2, m, km, metros, num3, num4, resultado1, resultado2, p1, p2, peso, ideal;
+         var ladoA, ladoB, ladoC, c1, c2, c3, c4, c5, c6, ladoa, ladob, ladoc, n1, n2, n3;
+
+       //1
+           base = parseInt(window.prompt("Digite o valor da base de um retângulo para obter sua área","0" ));
+           altura = parseInt(window.prompt("Digite o valor da altura de um râtangulo para obter sua área", "0"));
+           resultado = base * altura;
+           document.write("A área do retângulo é: " + resultado + "<br>");
+           
+       //2
+           aresta = parseInt(window.prompt("Digite o valor da aresta de um quadrado para obter sua área","0" ));
+           resultado = aresta * aresta;
+           document.write("A área do quadrado é: " + resultado + "<br>" );
+
+       //3
+           diagonal = parseInt(window.prompt("Digite o valor da diagonal de um quadrado para obter sua área", "0"));
+           resultado = (diagonal * diagonal) / 2;
+           document.write("A área do quadrado segundo sua diagonal é:" + resultado + "<br>");
+
+       //4
+           base = parseInt(window.prompt("Digite o valor da base de um trâingulo para obter sua área","0" ));
+           altura = parseInt(window.prompt("Digite o valor da altura de um triângulo para obter sua área", "0"));
+           resultado = (base * altura) / 2;
+           document.write("A área do triângulo é: " + resultado + "<br>");
+
+       //5
+           nota1 = parseInt(window.prompt("Digite o primeiro valor para calcular sua média aritmética","0" ));
+           nota2 = parseInt(window.prompt("Digite o segundo valor para calcular sua média aritmética","0" ));
+           nota3 = parseInt(window.prompt("Digite o terceiro valor para calcular sua média aritmética","0" ));
+           nota4 = parseInt(window.prompt("Digite o quarto valor para calcular sua média aritmética","0" ));
+           resultado = (nota1 + nota2+ nota3 +nota4) / 4;
+           document.write("A média aritmética dos 4 valores é: " + resultado + "<br>");
+
+       //6
+           valor1 = parseInt(window.prompt("Digite o primeiro valor para calcular sua média geométrica","0" ));
+           valor2 = parseInt(window.prompt("Digite o segundo valor para calcular sua média geométrica","0" ));
+           raiz = Math.sqrt (valor1 * valor2);
+           document.write("A média geométrica dos dois valores é: " + raiz + "<br>");
+
+       //7
+           m = parseInt(window.prompt("Digite um valor em milhas marítimas para converter em km","0" ));
+           metros = m * 1852;
+           km = metros / 1000;
+           document.write("O valor em km é: " + km + "<br>");
+
+       //8
+           c = parseInt(window.prompt("Digite um valor em graus Celsius para converter em Farenheit","0" ));
+           f = c * (9/5) + 32;
+           document.write(f + "º graus Farenheit" + "<br>");
+
+       //9
+           num1 = parseInt(window.prompt("Digite um número qualquer", "0" ));
+           num2 = parseInt(window.prompt("Digite outro número qualquer", "0 "));
+
+          if (num1 > num2)
+          {
+            document.write(num1 + " é maior que " + num2 + "<br>" );
+         
+          }  
+          else
+          {
+            document.write(num2 + " é maior que " + num1 + "<br>");
+          }
+
+       //10
+          num3 = parseInt(window.prompt("Digite um número qualquer", "0"));
+          num4 = parseInt(window.prompt("Digite outro número qualquer", "0"));
+
+          if (num3 > num4)
+          {
+            document.write(num3 + " é maior que " + num4 + "<br>");
+          
+          }  
+          else if (num4 > num3)
+          {
+            document.write(num4 + " é maior que " + num3 + "<br>");
+          }
+          else 
+          {
+
+            document.write(" Os números são iguais" + "<br>" );
+          }
+
+       //11
+          p1 = parseInt(window.prompt("Digite a primeira nota","0" ));
+          p2 = parseInt(window.prompt("Digite a segunda nota","0" ));
+          resultado1 = (p2 + p2);
+          resultado2 = (resultado1 + p1) /3;
+
+          if (resultado2 >= 6)
+          {
+            document.write("Você foi aprovado! :)" + "<br>");
+
+          }
+          else
+          {
+            document.write("Você foi reprovado! :(" + "<br>");
+
+          }
+
+       //12
+          peso = parseInt(window.prompt("Digite seu peso", "0" ));
+          altura = parseInt(window.prompt("Digite sua altura", "0" ));
+          resultado1 = altura * altura;
+          ideal = peso / resultado1;
+
+          if (ideal < 20)
+          {
+            document.write("Você está abaixo do peso :(" + "<br>" );
+
+          }
+
+          else if (20 <= ideal < 25)
+          {
+            document.write("Você está no peso ideal :)" + "<br>" );
+
+          }
+          else
+          {
+            document.write("Você está acima do peso :(" + "<br>");
+          }
+         
+       //13       
+          ladoA = Number(window.prompt("Digite o valor do primeiro lado de um triângulo para saber seu tipo ", "0"));
+          ladoB = Number(window.prompt("Digite o valor do segundo lado de um triângulo para saber seu tipo ", "0"));
+          ladoC = Number(window.prompt("Digite o valor do terceiro lado de um triângulo para saber seu tipo ", "0"));
+
+          c1 = ladoA + ladoB;
+          c2 = ladoA + ladoC;
+          c3 = ladoC + ladoB;
+
+          if (c1 < ladoC || c2 < ladoB || c3 < ladoA)
+          {
+            document.write("Isso não é um triângulo)" + "<br>");
+
+          }
+          else
+          { 
+
+          if (ladoA != ladoB && ladoA != ladoC && ladoB != ladoC)
+          {
+            document.write("O triângulo é escaleno" + "<br>");
+
+          }
+
+          else if (ladoA == ladoB && ladoB == ladoC)
+          {
+            document.write("O triângulo é equilátero" + "<br>" );
+
+          }
+
+          else 
+          { 
+            document.write("O triângulo é isósceles" + "<br>");
+          }
+          } 
+
+       //14
+          ladoa = Number(window.prompt("Digite o primeiro valor para saber se formam um triângulo retângulo", "0"));
+          ladob = Number(window.prompt("Digite o segundo valor para saber se formam um triângulo retângulo", "0"));
+          ladoc = Number(window.prompt("Digite o terceiro valor para saber se formam um triângulo retângulo", "0"));
+
+          c4 = (ladob * ladob) + (ladoc * ladoc);
+          c5 = (ladoa * ladoa) + (ladob * ladob);
+          c6 = (ladoa * ladoa) + (ladob * ladob);
+          if (c4 == (ladoa * ladoa) || (ladoc * ladoc) == c5 || (ladob * ladob) == c6)
+          {
+            document.write("Os valores digitados formam um triângulo retângulo" + "<br>");
+
+          }
+          else
+          {
+
+            document.write("Os valores digitados não formam um triângulo retângulo" + "<br>");
+          }
+
+       //15
+          n1 = Number(window.prompt("Digite um número", "0"));
+          n2 = Number(window.prompt("Digite outro número sendo esse maior que o anteior", "0"));
+
+          while (n2 < n1)
+          {
+            window.prompt("O segundo número é menor que o primeiro, digite-o novamente sendo ele maior que o anterior")
+
+          }
+
+          document.write("O primeiro número digitado é menor que o segundo" + "<br>");
+
+       //16
+          var c = 0
+          var t = 5
+
+          document.write("Tabuada do número 5:" + "<br>");
+
+          while (c != 10)
+          {
+           c++;
+           document.write(t + "*" + c + "=" + t*c + "<br>");
+          }
+
+       //17
+          var c = 0;
+
+          n3 = window.prompt("Digite um número positivo para saber sua tabuada","0");
+          document.write("A tabuada do número digitado é:" + "<br>");
+ 
+          while (c != 10)
+          {
+           c++;
+           document.write(n3 + "*" + c + "=" + n3*c + "<br>");
+          }
+
+        //18
+          <!DOCTYPE html>
+        
+          <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=script, initial-scale=1.0">
+        <title>20220811 - 18</title>
+        <style>
+      
+      table
+      {
+        display: inline-block;
+      }
+    </style>
+    </head>
+    <body>
+    <script lang="javascript">
+        function tabuada(...args) 
+        {
+          for (const number of args) 
+          {
+            construirTabuada(number);
+          }
+        }
+        
+        function construirTabuada(numero) 
+        {
+          let color_tr; 
+
+          document.write("<table border='1px' style='margin: 30px'>");
+
+          color_tr = "#ccc";
+          document.write("<tr style='background-color: " + color_tr + "'><td>Multiplicando</td><td>Resultado</td></tr>");
+
+          for (let i = 1; i <= 10; i++) 
+          {
+            document.write("<tr><td>" + i + "</td><td>" + i * numero + "</td></tr>");
+          }
+
+            document.write("</table>"); 
+          }
+
+
+tabuada(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
+
+    </script>
+</body>
+</html>
+
+       //19
+          var n4 = 0, soma = 0, conta = 0;
+
+          while (conta < 100)
+          {  
+           n4 += 1;
+           soma += n4;
+           conta++;
+          }
+
+          document.write("A soma dos 100 primeiros números é " + soma + "<br>" );
+       
+       //20
+          var Nanterior = 0; 
+          var Natual = 1;
+          var Fib;
+
+          teclado = Number(window.prompt("Digite o número 29 para obter os 30 primeiros valores da série de Fibonacci:", "0"));
+          document.write("Os 30 primeiros valores da série de Fibonacci:" + "<br>");
+          document.write("1" + "<br>");
+
+          for ( i = 0; i < teclado; i++)
+          {
+           Fib = Nanterior;
+           Nanterior = Natual;
+           Natual = Fib + Nanterior;
+
+           document.write(Natual + "<br>");
+          }
+
+    </script>
+ </boody>
+</html>
